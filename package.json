@@ -1,0 +1,13 @@
+{
+  "private": false,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.9.7",
+    "turbo": "^1.9.7"
+  },
+  "packageManager": "pnpm@7.15.0",
+  "name": "7-news-system-monorepo"
+}
