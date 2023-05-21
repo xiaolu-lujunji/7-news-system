@@ -4,10 +4,10 @@ import { resolve } from 'path';
 import { AppModule } from './app.module';
 
 ConfigModule.forRoot({
-  envFilePath: [
-    resolve(__dirname, '../../../.env.development'),
-    resolve(__dirname, '../../../.env.production'),
-  ],
+  envFilePath:
+    process.env.NODE_ENV === 'development'
+      ? resolve(__dirname, '../../../.env.development')
+      : resolve(__dirname, '../../../.env.production'),
 });
 
 async function bootstrap() {
