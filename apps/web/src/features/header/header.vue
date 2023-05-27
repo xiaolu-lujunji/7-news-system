@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 import Weather from './weather.vue'
 </script>
 
@@ -7,7 +8,7 @@ import Weather from './weather.vue'
     <div class="header-left">
       <RouterLink to="/">下载头条APP</RouterLink>
       <RouterLink to="/">添加到桌面</RouterLink>
-      <RouterLink to="/">关于头条</RouterLink>
+      <RouterLink to="/AboutPage">关于头条</RouterLink>
       <RouterLink to="/">反馈</RouterLink>
       <RouterLink to="/">侵权投诉</RouterLink>
       <RouterLink to="/">无障碍</RouterLink>
@@ -19,7 +20,7 @@ import Weather from './weather.vue'
         <i class="publisher-icon"></i>
         <span>发布作品</span>
       </RouterLink>
-      <RouterLink to="/" class="login-button"> 登录 </RouterLink>
+      <RouterLink to="/login" class="login-button"> 登录 </RouterLink>
     </div>
   </header>
 </template>
@@ -33,6 +34,7 @@ import Weather from './weather.vue'
   justify-content: space-between;
   width: 100%;
   padding: 0 16px;
+  z-index: 1;
 }
 
 .header-left {
