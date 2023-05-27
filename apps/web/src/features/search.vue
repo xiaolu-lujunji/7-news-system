@@ -1,19 +1,16 @@
-
-
 <template>
   <div class="search-container">
     <div class="search">
       <RouterLink to="/" class="logo"></RouterLink>
       <div class="search-input">
         <input type="text" />
-        
+
         <button>
           <RouterLink to="/search">
-          <i></i>
-          <span>搜索</span>
-        </RouterLink>
+            <i></i>
+            <span>搜索</span>
+          </RouterLink>
         </button>
-
       </div>
       <div class="hot-word">
         <img
@@ -29,9 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
-
-
+import { RouterLink } from 'vue-router'
 </script>
 
 <style lang="scss">
@@ -95,7 +90,7 @@ import { RouterLink } from 'vue-router';
     width: 72px;
     background: #f04142;
 
-    & > i {
+    & i {
       display: block;
       width: 32px;
       height: 32px;
@@ -103,7 +98,7 @@ import { RouterLink } from 'vue-router';
       background-image: url(//lf3-cdn2-tos.bytescm.com/toutiao/toutiao_web_pc/svgs/search_icon.3dd08573.svg);
     }
 
-    & > span {
+    & span {
       display: none;
     }
   }

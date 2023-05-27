@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 import Weather from './weather.vue'
 </script>
 
 <template>
   <header class="header">
     <div class="header-left">
-      <RouterLink to="/">下载头条APP</RouterLink>
+      <RouterLink to="/download">下载头条APP</RouterLink>
       <RouterLink to="/">添加到桌面</RouterLink>
       <RouterLink to="/AboutPage">关于头条</RouterLink>
       <RouterLink to="/">反馈</RouterLink>

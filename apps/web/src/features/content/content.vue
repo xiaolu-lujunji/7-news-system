@@ -50,7 +50,11 @@ interface Feed {
 
 const feeds = ref<Feed[]>([])
 onMounted(async () => {
-  const res = await (await fetch(`${baseUrl}/feed`)).json()
+  const url =
+    'https://www.toutiao.com/api/pc/list/feed?channel_id=0&max_behot_time=1685175699&offset=0&category=pc_profile_recommend&aid=24&app_name=toutiao_web'
+  // @ts-ignore
+  const signature = byted_acrawler.sign({ url })
+  const res = await (await fetch(`${baseUrl}/feed?signature=${signature}`)).json()
   feeds.value = (res.data as Feed[]).filter((feed) => feed.cell_type === 0)
 })
 </script>
