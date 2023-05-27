@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-</script>
+
 
 <template>
   <div class="search-container">
@@ -8,10 +6,14 @@ import { RouterLink } from 'vue-router'
       <RouterLink to="/" class="logo"></RouterLink>
       <div class="search-input">
         <input type="text" />
+        
         <button>
+          <RouterLink to="/search">
           <i></i>
           <span>搜索</span>
+        </RouterLink>
         </button>
+
       </div>
       <div class="hot-word">
         <img
@@ -26,6 +28,12 @@ import { RouterLink } from 'vue-router'
   </div>
 </template>
 
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+
+</script>
+
 <style lang="scss">
 .search-container {
   width: 100%;
@@ -38,7 +46,6 @@ import { RouterLink } from 'vue-router'
   align-items: center;
   position: absolute;
   top: 0;
-  z-index: 1;
 }
 
 .search {

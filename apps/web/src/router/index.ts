@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -21,6 +21,23 @@ const router = createRouter({
       path:'/download',
       name:'download',
       component:() => import('../views/Download.vue')
+    },
+    {
+      path:'/login',
+      name:'login',
+      component:() => import('../views/login.vue')
+    }
+    ,
+    {
+      path:'/search',
+      name:'search',
+      component:() => import('../views/search.vue')
+    }
+    ,
+    {
+      path:'/AboutPage',
+      name:'',
+      component:() => import('../views/AboutPage.vue')
     }
   ]
 })
