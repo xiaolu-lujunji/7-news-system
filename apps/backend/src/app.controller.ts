@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -16,7 +16,7 @@ export class AppController {
   }
 
   @Get('feed')
-  getFeed() {
-    return this.appService.getFeed();
+  getFeed(@Query() query: { signature: string }) {
+    return this.appService.getFeed(query.signature);
   }
 }

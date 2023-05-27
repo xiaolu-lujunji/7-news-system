@@ -8,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
@@ -22,8 +25,8 @@ let AppController = class AppController {
     getDevelopers() {
         return this.appService.getDevelopers();
     }
-    getFeed() {
-        return this.appService.getFeed();
+    getFeed(query) {
+        return this.appService.getFeed(query.signature);
     }
 };
 __decorate([
@@ -40,8 +43,9 @@ __decorate([
 ], AppController.prototype, "getDevelopers", null);
 __decorate([
     (0, common_1.Get)('feed'),
+    __param(0, (0, common_1.Query)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "getFeed", null);
 AppController = __decorate([

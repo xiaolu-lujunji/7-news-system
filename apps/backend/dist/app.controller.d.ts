@@ -4,5 +4,7 @@ export declare class AppController {
     constructor(appService: AppService);
     getHello(): string;
     getDevelopers(): string[];
-    getFeed(): Promise<any>;
+    getFeed(query: {
+        signature: string;
+    }): Promise<any>;
 }

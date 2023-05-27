@@ -4,5 +4,5 @@ export declare class AppService {
     constructor(httpService: HttpService);
     getHello(): string;
     getDevelopers(): string[];
-    getFeed(): Promise<any>;
+    getFeed(signature: string): Promise<any>;
 }
