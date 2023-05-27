@@ -14,4 +14,9 @@ export class AppController {
   getDevelopers(): string[] {
     return this.appService.getDevelopers();
   }
+
+  @Get('feed')
+  getFeed() {
+    return this.appService.getFeed();
+  }
 }
