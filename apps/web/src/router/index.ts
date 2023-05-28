@@ -18,26 +18,29 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path:'/download',
-      name:'download',
-      component:() => import('../views/Download.vue')
+      path: '/download',
+      name: 'download',
+      component: () => import('../views/Download.vue')
     },
     {
-      path:'/login',
-      name:'login',
-      component:() => import('../views/login.vue')
-    }
-    ,
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/login.vue')
+    },
     {
-      path:'/search',
-      name:'search',
-      component:() => import('../views/search.vue')
-    }
-    ,
+      path: '/search',
+      name: 'search',
+      component: () => import('../views/search.vue')
+    },
     {
-      path:'/AboutPage',
-      name:'',
-      component:() => import('../views/AboutPage.vue')
+      path: '/AboutPage',
+      name: '',
+      component: () => import('../views/AboutPage.vue')
+    },
+    {
+      path: '/complain',
+      name: 'complain',
+      component: () => import('../views/complain.vue')
     }
   ]
 })
