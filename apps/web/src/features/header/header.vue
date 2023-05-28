@@ -10,7 +10,7 @@ import Weather from './weather.vue'
       <RouterLink to="/">添加到桌面</RouterLink>
       <RouterLink to="/AboutPage">关于头条</RouterLink>
       <RouterLink to="/">反馈</RouterLink>
-      <RouterLink to="/">侵权投诉</RouterLink>
+      <RouterLink to="/complain">侵权投诉</RouterLink>
       <RouterLink to="/">无障碍</RouterLink>
     </div>
     <div class="header-right">
